@@ -1,0 +1,8 @@
+/******************************************* Navbar styles *************************************/
+#bootstrap-overrides .navbar-brand {
+    color: dodgerblue;
+}
+
+#bootstrap-overrides .navbar-right {
+    margin-right: 5px;
+}
