@@ -1,0 +1,7 @@
+#bootstrap-overrides .container h1 {
+    margin-top: 50px;
+}
+
+#bootstrap-overrides .row {
+    text-align: center;
+}

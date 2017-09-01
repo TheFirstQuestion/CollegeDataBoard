@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>CollegeDataBoard</title>
+    <title>College Data Board</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -17,29 +17,30 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">CollegeDataBoard</a>
+            <a class="navbar-brand" href="/">CollegeDataBoard</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="#">MIT</a></li>
-            <li><a href="#">Stanford</a></li>
-            <li class="active"><a href="#">Carnegie Mellon</a></li>
-            <li><a href="#">CalTech</a></li>
-            <li><a href="#">Berkely</a></li>
-            <li><a href="#">Georgia Tech</a></li>
-            <li><a href="#">Penn</a></li>
-            <li><a href="#">Brown</a></li>
-            <li><a href="#">Harvard</a></li>
+            <li><a href="/mit">MIT</a></li>
+            <li><a href="/stanford">Stanford</a></li>
+            <li><a href="/carnegiemellon">Carnegie Mellon</a></li>
+            <li><a href="/caltech">CalTech</a></li>
+            <li><a href="/berkeley">Berkeley</a></li>
+            <li><a href="/georgiatech">Georgia Tech</a></li>
+            <li><a href="/penn">Penn</a></li>
+            <li><a href="/brown">Brown</a></li>
+            <li><a href="/harvard">Harvard</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-            <button class="btn btn-primary navbar-btn">Compare</button>
+            <a href="/compare"><button class="btn btn-primary navbar-btn">Compare</button></a>
         </ul>
       </div>
     </nav>
 
     <script>
-        $(".nav a").on("click", function(){
-            $(".nav").find(".active").removeClass("active");
-            $(this).parent().addClass("active");
-        });
+        $(document).ready(function() {
+        	// get current URL path and assign 'active' class
+        	var pathname = window.location.pathname;
+        	$('.nav > li > a[href="'+pathname+'"]').parent().addClass('active');
+        })
     </script>
