@@ -3,6 +3,6 @@
     color: dodgerblue;
 }
 
-#bootstrap-overrides .navbar-right {
+#bootstrap-overrides .nav button {
     margin-right: 5px;
 }

@@ -1,46 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>College Data Board</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <!-- My CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header-style.css') }}">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   </head>
-<body id="bootstrap-overrides">
+  <body id="bootstrap-overrides">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+          <a class="navbar-brand" href="/">CollegeDataBoard</a>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/">CollegeDataBoard</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li><a href="/mit">MIT</a></li>
-            <li><a href="/stanford">Stanford</a></li>
-            <li><a href="/carnegiemellon">Carnegie Mellon</a></li>
-            <li><a href="/caltech">CalTech</a></li>
-            <li><a href="/berkeley">Berkeley</a></li>
-            <li><a href="/georgiatech">Georgia Tech</a></li>
-            <li><a href="/penn">Penn</a></li>
-            <li><a href="/brown">Brown</a></li>
-            <li><a href="/harvard">Harvard</a></li>
-        </ul>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <ul class="nav navbar-nav navbar-right">
-            <a href="/compare"><button class="btn btn-primary navbar-btn">Compare</button></a>
-        </ul>
-      </div>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="/mit">MIT</a>
+              <a class="nav-item nav-link" href="/stanford">Stanford</a>
+              <a class="nav-item nav-link" href="/caltech">CalTech</a>
+            </div>
+          </div>
     </nav>
 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    <!-- Script to switch active -->
     <script>
-        $(document).ready(function() {
-        	// get current URL path and assign 'active' class
-        	var pathname = window.location.pathname;
-        	$('.nav > li > a[href="'+pathname+'"]').parent().addClass('active');
-        })
+        
     </script>
+
+  </body>
+</html>
