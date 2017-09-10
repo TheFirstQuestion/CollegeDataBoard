@@ -13,11 +13,11 @@ def mit():
 
 @app.route("/stanford")
 def stanford():
-    return render_template('college.html', school="Stanford")
+    return render_template('college.html', school="Stanford", data=getFromDb("Stanford"))
 
 @app.route("/carnegiemellon")
 def carnegiemellon():
-    return render_template('college.html', school="Carnegie Mellon")
+    return render_template('college.html', school="Carnegie Mellon", data=getFromDb("Carnegie Mellon"))
 
 @app.route("/caltech")
 def caltech():

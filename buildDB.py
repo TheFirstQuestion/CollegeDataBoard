@@ -73,7 +73,77 @@ conn.execute('''INSERT INTO schools VALUES
     "$17,992");
 ''')
 
+conn.execute('''INSERT INTO schools VALUES
+    ("Stanford",
+    "http://www.stanford.edu/",
+    "Stanford, California",
+    "Suburban",
+    "7,018 students (Medium)",
+    "Private",
+    "4.8%",
+    "Restrictive Early Action (Applicants do not apply to any other <strong>private</strong> college/university under their Early Action, Restrictive Early Action, Early Decision or Early Notification program.)",
+    "Yes",
+    "Recommended",
+    "700-790",
+    "680-780",
+    "1380-1570",
+    "???",
+    "5",
+    "4",
+    "5",
+    "4",
+    "4",
+    "none",
+    "none",
+    "none",
+    "none",
+    "4",
+    "4",
+    "none",
+    "none",
+    "none",
+    "$64,477",
+    "$50,547",
+    "100%",
+    "$18,212");
+''')
 
+
+conn.execute('''INSERT INTO schools VALUES
+    ("Carnegie Mellon",
+    "http://www.cmu.edu/",
+    "Pittsburgh, Pennsylvania",
+    "City",
+    "5,819 students (Medium)",
+    "Private",
+    "13.7%",
+    "Early Decision",
+    "Yes",
+    "Recommended (School of Computer Science: Math Level II and
+Physics, Chemistry or Biology)",
+    "700-800",
+    "650-750",
+    "1350-1550",
+    "???",
+    "4",
+    "5",
+    "5",
+    "4",
+    "4",
+    "4",
+    "5",
+    "5",
+    "5",
+    "none",
+    "5",
+    "4",
+    "5",
+    "5",
+    "$68,452",
+    "$41,636",
+    "98%",
+    "$29,800");
+''')
 
 
 

@@ -1,5 +1,10 @@
 {% include "header.html" %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/college-style.css') }}">
+<title>{{ school }}</title>
+
+<!-- To allow HTML tags in data, which Flask autoescapes -->
+{% autoescape false %}
+
 
 <div class="container">
   <div class="jumbotron">
@@ -110,10 +115,8 @@
         </tr>
         <tr class="row table-secondary">
           <th scope="row" class="col-3">Subject Tests</th>
-          <!-- To allow newlines, which Flask autoescapes -->
-          {% autoescape false %}
           <td class="col-5">{{ data.sts }}</td>
-          {% endautoescape %}
+
           <td class="col-4">Math II: 770</td>
         </tr>
       </tbody>
@@ -201,6 +204,9 @@
     </table>
   </div>
 
+
+{% endautoescape %}
+
 <!-- Hide if they don't offer credit, I haven't taken it, or my score is too low -->
 <script>
     $(document).ready(function() {
@@ -231,7 +237,7 @@
 
         toggle();
 
-        // Triger toggle when button is clicked
+        // Trigger toggle when button is clicked
         $(".btn-outline-info").click(function() {
             count++;
             toggle();
