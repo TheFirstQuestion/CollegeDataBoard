@@ -2,7 +2,3 @@
 #bootstrap-overrides .navbar-brand {
     color: dodgerblue;
 }
-
-#bootstrap-overrides .nav button {
-    margin-right: 5px;
-}

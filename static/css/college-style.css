@@ -1,3 +1,8 @@
 #bootstrap-overrides .container h1 {
     margin-top: 50px;
+    display: inline-block;
+}
+
+#bootstrap-overrides .btn-outline-info {
+    margin-left: 20px;
 }

@@ -3,112 +3,242 @@
 
 <div class="container">
   <div class="jumbotron">
-    <h1>{{ school }}</h1>
-    <span><a href="">WEBSITE</a></span>
+    <a href="{{ data.website }}"><h1>{{ school }}</h1></a>
   </div>
 
   <h1>Basic Info</h1>
   <hr>
-  <div>Location: (hours)</div>
-  <div>Setting:</div>
-  <div>Size:</div>
-  <div>Private/Public</div>
+  <div class="col-12">
+    <!-- 12 columns wide-->
+    <table class="table table-hover table-bordered table-responsive">
+      <tbody>
+        <tr class="row table-primary">
+          <th scope="row" class="col-3">Location</th>
+          <td class="col-9">{{ data.location }}</td>
+        </tr>
+        <tr class="row table-secondary">
+          <th scope="row" class="col-3">Setting</th>
+          <td class="col-9">{{ data.setting }}</td>
+        </tr>
+        <tr class="row table-primary">
+          <th scope="row" class="col-3">Size</th>
+          <td class="col-9">{{ data.size }}</td>
+        </tr>
+        <tr class="row table-secondary">
+          <th scope="row" class="col-3">Public/Private</th>
+          <td class="col-9">{{ data.pp }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 
 
   <h1>Admissions Info</h1>
   <hr>
-  <div>Admittance Rate:</div>
-  <div>Early Decision/Early Action:</div>
-  <div>Common App:</div>
-  <div>Subject Tests:</div>
+  <div class="col-12">
+    <!-- 12 columns wide-->
+    <table class="table table-hover table-bordered table-responsive">
+      <tbody>
+        <tr class="row table-primary">
+          <th scope="row" class="col-3">Admit Rate</th>
+          <td class="col-9">{{ data.rate }}</td>
+        </tr>
+        <tr class="row table-secondary">
+          <th scope="row" class="col-3">Early Decision/Early Action</th>
+          <td class="col-9">{{ data.ED }}</td>
+        </tr>
+        <tr class="row table-primary">
+          <th scope="row" class="col-3">Common App</th>
+          <td class="col-9">{{ data.app }}</td>
+        </tr>
+        <tr class="row table-secondary">
+          <th scope="row" class="col-3">Subject Tests</th>
+          <td class="col-9">{{ data.st }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <h1>Money</h1>
   <hr>
-  <!--
-  yearly tuition + room
-  average financial aid
-  -->
+  <div class="col-12">
+    <!-- 12 columns wide-->
+    <table class="table table-hover table-bordered table-responsive">
+      <tbody>
+        <tr class="row table-primary">
+          <th scope="row" class="col-3">Yearly Tuition</th>
+          <td class="col-9">{{ data.tuition }}</td>
+        </tr>
+        <tr class="row table-secondary">
+          <th scope="row" class="col-3">By Family Income</th>
+          <td class="col-9">{{ data.bracket }}</td>
+        </tr>
+        <tr class="row table-primary">
+          <th scope="row" class="col-3">Average Financial Aid</th>
+          <td class="col-9">{{ data.avgAid }}</td>
+        </tr>
+        <tr class="row table-secondary">
+          <th scope="row" class="col-3">Students Receiving Aid</th>
+          <td class="col-9">{{ data.rcvAid }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 
   <h1>Testing</h1>
   <hr>
-  <div>SAT Math:</div>
-  <div>SAT Language:</div>
-  <div>ACT Composite:</div>
-  <div>ACT Scores</div>
-  <div>Subject Tests:</div>
+  <div class="col-12">
+    <!-- 12 columns wide-->
+    <table class="table table-hover table-bordered table-responsive">
+      <tbody>
+        <tr class="row table-primary">
+          <th scope="row" class="col-3">SAT Total</th>
+          <td class="col-5">{{ data.SAT }}</td>
+          <td class="col-4">1480</td>
+        </tr>
+        <tr class="row table-secondary">
+          <th scope="row" class="col-3">SAT Math</th>
+          <td class="col-5">{{ data.SATm }}</td>
+          <td class="col-4">720</td>
+        </tr>
+        <tr class="row table-primary">
+          <th scope="row" class="col-3">SAT Language</th>
+          <td class="col-5">{{ data.SATl }}</td>
+          <td class="col-4">780</td>
+        </tr>
+        <tr class="row table-secondary">
+          <th scope="row" class="col-3">Subject Tests</th>
+          <!-- To allow newlines, which Flask autoescapes -->
+          {% autoescape false %}
+          <td class="col-5">{{ data.sts }}</td>
+          {% endautoescape %}
+          <td class="col-4">Math II: 770</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 
-  <h1>Credits</h1>
+  <h1>AP Credits</h1> <button type="button" class="btn btn-outline-info inline align-text-bottom">Show All</button>
   <hr>
-  <div>Calculus AB Subscore</div>
-  <div>Calculus BC</div>
-  <div>Chemistry</div>
-  <div>Computer Science A</div>
-  <div>Computer Science Principles</div>
-  <div>Government</div>
-  <div>Language and Composition</div>
-  <div>Literature and Composition</div>
-  <div>Macro Economics</div>
-  <div>Physics 1</div>
-  <div>Physics 2</div>
-  <div>Physics C</div>
-  <div>Statistics</div>
-  <div>U.S. History</div>
-  <div>World History</div>
+  <div class="col-12">
+    <!-- 12 columns wide-->
+    <table class="table table-hover table-bordered table-responsive">
+      <tbody>
+        <tr class="row table-primary">
+          <th scope="row" class="col-3">Calculus AB Subscore</th>
+          <td class="col-5">{{ data.ABcalc }}</td>
+          <td class="col-4">3</td>
+        </tr>
+        <tr class="row table-secondary">
+          <th scope="row" class="col-3">Calculus BC</th>
+          <td class="col-5">{{ data.BCcalc }}</td>
+          <td class="col-4">2</td>
+        </tr>
+        <tr class="row table-primary">
+          <th scope="row" class="col-3">Chemistry</th>
+          <td class="col-5">{{ data.chem }}</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr class="row table-secondary">
+          <th scope="row" class="col-3">Computer Science A</th>
+          <td class="col-5">{{ data.csa }}</td>
+          <td class="col-4">5</td>
+        </tr>
+        <tr class="row table-primary">
+          <th scope="row" class="col-3">Computer Science Principles</th>
+          <td class="col-5">{{ data.csp }}</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr class="row table-secondary">
+          <th scope="row" class="col-3">Government</th>
+          <td class="col-5">{{ data.gov }}</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr class="row table-primary">
+          <th scope="row" class="col-3">Language and Composition</th>
+          <td class="col-5">{{ data.lang }}</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr class="row table-secondary">
+          <th scope="row" class="col-3">Literature and Composition</th>
+          <td class="col-5">{{ data.lit }}</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr class="row table-primary">
+          <th scope="row" class="col-3">Macro Economics</th>
+          <td class="col-5">{{ data.econ }}</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr class="row table-secondary">
+          <th scope="row" class="col-3">Physics 1</th>
+          <td class="col-5">{{ data.phy1 }}</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr class="row table-primary">
+          <th scope="row" class="col-3">Physics C</th>
+          <td class="col-5">{{ data.phyC }}</td>
+          <td class="col-4"N/A>N/A</td>
+        </tr>
+        <tr class="row table-secondary">
+          <th scope="row" class="col-3">Statistics</th>
+          <td class="col-5">{{ data.stats }}</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr class="row table-primary">
+          <th scope="row" class="col-3">U.S. History</th>
+          <td class="col-5">{{ data.apush }}</td>
+          <td class="col-4">5</td>
+        </tr>
+        <tr class="row table-secondary">
+          <th scope="row" class="col-3">World History</th>
+          <td class="col-5">{{ data.whap }}</td>
+          <td class="col-4">3</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<!-- Hide if they don't offer credit, I haven't taken it, or my score is too low -->
+<script>
+    $(document).ready(function() {
+        var count = 0;
+
+        var toggle = function() {
+            if (count % 2 == 0) {
+                $("td").each(function() {
+                    if ($(this).text() == "none" || $(this).text() == "N/A" || +($(this).text()) < +($(this).prev().text())) {
+                        // Hide rows
+                        $(this).parent().addClass("d-none");
+                    }
+                });
+
+                // Set button text
+                $(".btn-outline-info").html("Show All");
+            } else {
+                $("td").each(function() {
+                    // Add rows back
+                    $(this).parent().removeClass("d-none");
+                })
+
+                // Set button text
+                $(".btn-outline-info").html("Hide Inapplicable");
+            }
+
+        }
+
+        toggle();
+
+        // Triger toggle when button is clicked
+        $(".btn-outline-info").click(function() {
+            count++;
+            toggle();
+        });
+    });
+</script>
 
 
 
-
-
-  <table class="table table-inverse">
-      <tr class="">
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr class="">
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-  </table>
-
-
-
-
-
-  <table class="table table-inverse">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
-
-
-  
 </div>
