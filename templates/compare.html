@@ -1,8 +1,358 @@
 {% include "header.html" %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/college-style.css') }}">
 <title>Compare</title>
+<!-- To allow HTML tags in data, which Flask autoescapes -->
+{% autoescape false %}
+
 
 <div class="container">
   <div class="jumbotron">
     <h1>Compare</h1>
   </div>
-</div>
+
+
+    <h1>Basic Info</h1>
+    <hr>
+    <div class="col-12">
+      <!-- 12 columns wide-->
+      <table class="table table-hover table-striped table-bordered table-responsive" id="basicInfo">
+        <thead>
+            <tr class="row thead-inverse">
+                <th class="col-4"></th>
+                <th class="col-2" onclick="sortTable(0, 'basicInfo')">Location</th>
+                <th class="col-2" onclick="sortTable(1, 'basicInfo')">Setting</th>
+                <th class="col-2" onclick="sortTable(2, 'basicInfo')">Size</th>
+                <th class="col-2" onclick="sortTable(3, 'basicInfo')">Public/Private</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.0.name }}</th>
+            <td class="col-2">{{ data.0.location }}</td>
+            <td class="col-2">{{ data.0.setting }}</td>
+            <td class="col-2">{{ data.0.size }}</td>
+            <td class="col-2">{{ data.0.pp }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.1.name }}</th>
+            <td class="col-2">{{ data.1.location }}</td>
+            <td class="col-2">{{ data.1.setting }}</td>
+            <td class="col-2">{{ data.1.size }}</td>
+            <td class="col-2">{{ data.1.pp }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.2.name }}</th>
+            <td class="col-2">{{ data.2.location }}</td>
+            <td class="col-2">{{ data.2.setting }}</td>
+            <td class="col-2">{{ data.2.size }}</td>
+            <td class="col-2">{{ data.2.pp }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.3.name }}</th>
+            <td class="col-2">{{ data.3.location }}</td>
+            <td class="col-2">{{ data.3.setting }}</td>
+            <td class="col-2">{{ data.3.size }}</td>
+            <td class="col-2">{{ data.3.pp }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.4.name }}</th>
+            <td class="col-2">{{ data.4.location }}</td>
+            <td class="col-2">{{ data.4.setting }}</td>
+            <td class="col-2">{{ data.4.size }}</td>
+            <td class="col-2">{{ data.4.pp }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <h1>Rankings</h1>
+    <hr>
+    <div class="col-12">
+      <!-- 12 columns wide-->
+      <table class="table table-hover table-striped table-bordered table-responsive" id="rankings">
+        <thead>
+            <tr class="row thead-inverse">
+                <th class="col-4"></th>
+                <th class="col-2" onclick="sortTable(0, 'rankings')"><a href="https://www.usnews.com/best-colleges/rankings/engineering-doctorate-computer">U.S. News</a></th>
+                <th class="col-2" onclick="sortTable(1, 'rankings')"><a href="https://www.niche.com/colleges/search/best-colleges-for-computer-science/">Niche</a></th>
+                <th class="col-2" onclick="sortTable(2, 'rankings')"><a href="http://www.bestvalueschools.com/computer-science-degrees-best-roi/">BestValueSchools</a></th>
+                <th class="col-2" onclick="sortTable(3, 'rankings')"><a href="http://www.collegechoice.net/rankings/best-computer-science-degree/">CollegeChoice</a></th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.0.name }}</th>
+            <td class="col-2">{{ data.0.USr }}</td>
+            <td class="col-2">{{ data.0.niR }}</td>
+            <td class="col-2">{{ data.0.bvsR }}</td>
+            <td class="col-2">{{ data.0.ccnR }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.1.name }}</th>
+            <td class="col-2">{{ data.1.USr }}</td>
+            <td class="col-2">{{ data.1.niR }}</td>
+            <td class="col-2">{{ data.1.bvsR }}</td>
+            <td class="col-2">{{ data.1.ccnR }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.2.name }}</th>
+            <td class="col-2">{{ data.2.USr }}</td>
+            <td class="col-2">{{ data.2.niR }}</td>
+            <td class="col-2">{{ data.2.bvsR }}</td>
+            <td class="col-2">{{ data.2.ccnR }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.3.name }}</th>
+            <td class="col-2">{{ data.3.USr }}</td>
+            <td class="col-2">{{ data.3.niR }}</td>
+            <td class="col-2">{{ data.3.bvsR }}</td>
+            <td class="col-2">{{ data.3.ccnR }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.4.name }}</th>
+            <td class="col-2">{{ data.4.USr }}</td>
+            <td class="col-2">{{ data.4.niR }}</td>
+            <td class="col-2">{{ data.4.bvsR }}</td>
+            <td class="col-2">{{ data.4.ccnR }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <h1>Admissions Info</h1>
+    <hr>
+    <div class="col-12">
+      <!-- 12 columns wide-->
+      <table class="table table-hover table-striped table-bordered table-responsive" id="admissions">
+        <thead>
+            <tr class="row thead-inverse">
+                <th class="col-4"></th>
+                <th class="col-2" onclick="sortTable(0, 'admissions')">Admit Rate</th>
+                <th class="col-2" onclick="sortTable(1, 'admissions')">Early Decision/Early Action</th>
+                <th class="col-2" onclick="sortTable(2, 'admissions')">Common App</th>
+                <th class="col-2" onclick="sortTable(3, 'admissions')">Subject Tests</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.0.name }}</th>
+            <td class="col-2">{{ data.0.rate }}</td>
+            <td class="col-2">{{ data.0.ED }}</td>
+            <td class="col-2">{{ data.0.app }}</td>
+            <td class="col-2">{{ data.0.st }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.1.name }}</th>
+            <td class="col-2">{{ data.1.rate }}</td>
+            <td class="col-2">{{ data.1.ED }}</td>
+            <td class="col-2">{{ data.1.app }}</td>
+            <td class="col-2">{{ data.1.st }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.2.name }}</th>
+            <td class="col-2">{{ data.2.rate }}</td>
+            <td class="col-2">{{ data.2.ED }}</td>
+            <td class="col-2">{{ data.2.app }}</td>
+            <td class="col-2">{{ data.2.st }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.3.name }}</th>
+            <td class="col-2">{{ data.3.rate }}</td>
+            <td class="col-2">{{ data.3.ED }}</td>
+            <td class="col-2">{{ data.3.app }}</td>
+            <td class="col-2">{{ data.3.st }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.4.name }}</th>
+            <td class="col-2">{{ data.4.rate }}</td>
+            <td class="col-2">{{ data.4.ED }}</td>
+            <td class="col-2">{{ data.4.app }}</td>
+            <td class="col-2">{{ data.4.st }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <h1>Money</h1>
+    <hr>
+    <div class="col-12">
+      <!-- 12 columns wide-->
+      <table class="table table-hover table-striped table-bordered table-responsive" id="money">
+        <thead>
+            <tr class="row thead-inverse">
+                <th class="col-4"></th>
+                <th class="col-2" onclick="sortTable(0, 'money')">Yearly Tuition</th>
+                <th class="col-2" onclick="sortTable(1, 'money')">By Family Income</th>
+                <th class="col-2" onclick="sortTable(2, 'money')">Average Financial Aid</th>
+                <th class="col-2" onclick="sortTable(3, 'money')">Students Receiving Aid</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.0.name }}</th>
+            <td class="col-2">{{ data.0.tuition }}</td>
+            <td class="col-2">{{ data.0.bracket }}</td>
+            <td class="col-2">{{ data.0.avgAid }}</td>
+            <td class="col-2">{{ data.0.rcvAid }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.1.name }}</th>
+            <td class="col-2">{{ data.1.tuition }}</td>
+            <td class="col-2">{{ data.1.bracket }}</td>
+            <td class="col-2">{{ data.1.avgAid }}</td>
+            <td class="col-2">{{ data.1.rcvAid }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.2.name }}</th>
+            <td class="col-2">{{ data.2.tuition }}</td>
+            <td class="col-2">{{ data.2.bracket }}</td>
+            <td class="col-2">{{ data.2.avgAid }}</td>
+            <td class="col-2">{{ data.2.rcvAid }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.3.name }}</th>
+            <td class="col-2">{{ data.3.tuition }}</td>
+            <td class="col-2">{{ data.3.bracket }}</td>
+            <td class="col-2">{{ data.3.avgAid }}</td>
+            <td class="col-2">{{ data.3.rcvAid }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.4.name }}</th>
+            <td class="col-2">{{ data.4.tuition }}</td>
+            <td class="col-2">{{ data.4.bracket }}</td>
+            <td class="col-2">{{ data.4.avgAid }}</td>
+            <td class="col-2">{{ data.4.rcvAid }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <h1>Testing</h1>
+    <hr>
+    <div class="col-12">
+      <!-- 12 columns wide-->
+      <table class="table table-hover table-striped table-bordered table-responsive" id="testing">
+        <thead>
+            <tr class="row thead-inverse">
+                <th class="col-4"></th>
+                <th class="col-2" onclick="sortTable(0, 'testing')">SAT Total</th>
+                <th class="col-2" onclick="sortTable(1, 'testing')">SAT Math</th>
+                <th class="col-2" onclick="sortTable(2, 'testing')">SAT Language</th>
+                <th class="col-2" onclick="sortTable(3, 'testing')">Subject Tests</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.0.name }}</th>
+            <td class="col-2">{{ data.0.SAT }}</td>
+            <td class="col-2">{{ data.0.SATm }}</td>
+            <td class="col-2">{{ data.0.SATl }}</td>
+            <td class="col-2">{{ data.0.sts }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.1.name }}</th>
+            <td class="col-2">{{ data.1.SAT }}</td>
+            <td class="col-2">{{ data.1.SATm }}</td>
+            <td class="col-2">{{ data.1.SATl }}</td>
+            <td class="col-2">{{ data.1.sts }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.2.name }}</th>
+            <td class="col-2">{{ data.2.SAT }}</td>
+            <td class="col-2">{{ data.2.SATm }}</td>
+            <td class="col-2">{{ data.2.SATl }}</td>
+            <td class="col-2">{{ data.2.sts }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.3.name }}</th>
+            <td class="col-2">{{ data.3.SAT }}</td>
+            <td class="col-2">{{ data.3.SATm }}</td>
+            <td class="col-2">{{ data.3.SATl }}</td>
+            <td class="col-2">{{ data.3.sts }}</td>
+          </tr>
+          <tr class="row">
+            <th scope="row" class="col-4">{{ data.4.name }}</th>
+            <td class="col-2">{{ data.4.SAT }}</td>
+            <td class="col-2">{{ data.4.SATm }}</td>
+            <td class="col-2">{{ data.4.SATl }}</td>
+            <td class="col-2">{{ data.4.sts }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h1>The <small>(Tentative)</small> Verdict</h1>
+    <hr>
+    <ol>
+        <li>MIT</li>
+        <li>Stanford</li>
+        <li>Carnegie Mellon</li>
+        <li>Berkeley</li>
+        <li>Georgia Tech</li>
+        <small><li>Purdue</li></small>
+    </ol>
+
+{% endautoescape %}
+
+<!-- Sort tables -->
+<!-- https://www.w3schools.com/howto/howto_js_sort_table.asp -->
+<script>
+    function sortTable(n, tblId) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById(tblId);
+      switching = true;
+      //Set the sorting direction to ascending:
+      dir = "asc";
+      /*Make a loop that will continue until
+      no switching has been done:*/
+      while (switching) {
+        //start by saying: no switching is done:
+        switching = false;
+        rows = table.getElementsByTagName("TR");
+        /*Loop through all table rows (except the
+        first, which contains table headers):*/
+        for (i = 1; i < (rows.length - 1); i++) {
+          //start by saying there should be no switching:
+          shouldSwitch = false;
+          /*Get the two elements you want to compare,
+          one from current row and one from the next:*/
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+          /*check if the two rows should switch place,
+          based on the direction, asc or desc:*/
+          if (dir == "asc") {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              //if so, mark as a switch and break the loop:
+              shouldSwitch= true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+              //if so, mark as a switch and break the loop:
+              shouldSwitch= true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+          /*If a switch has been marked, make the switch
+          and mark that a switch has been done:*/
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          //Each time a switch is done, increase this count by 1:
+          switchcount ++;
+        } else {
+          /*If no switching has been done AND the direction is "asc",
+          set the direction to "desc" and run the while loop again.*/
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+</script>

@@ -35,7 +35,11 @@ conn.execute('''CREATE TABLE schools
     tuition VARCHAR,
     avgAid VARCHAR,
     rcvAid VARCHAR,
-    bracket VARCHAR
+    bracket VARCHAR,
+    USr VARCHAR,
+    niR VARCHAR,
+    bvsR VARCHAR,
+    ccnR VARCHAR
      );''')
 
 conn.execute('''INSERT INTO schools VALUES
@@ -43,12 +47,12 @@ conn.execute('''INSERT INTO schools VALUES
     "http://web.mit.edu/",
     "Cambridge, Massachusetts",
     "City",
-    "4,476 students (Medium)",
+    "04,476 students (Medium)",
     "Private",
-    "7.9%",
+    "07.9%",
     "Early Action",
     "No",
-    "two: one in math (level 1 or 2), and one in science (physics, chemistry, or biology e/m)",
+    "Required.<br>one in math (level 1 or 2), and one in science (physics, chemistry, or biology e/m)",
     "770-800",
     "730-780",
     "1500-1580",
@@ -70,7 +74,11 @@ conn.execute('''INSERT INTO schools VALUES
     "$67,430",
     "$42,145",
     "91%",
-    "$17,992");
+    "$17,992",
+    "#01",
+    "#01",
+    "#02",
+    "#02");
 ''')
 
 conn.execute('''INSERT INTO schools VALUES
@@ -78,12 +86,12 @@ conn.execute('''INSERT INTO schools VALUES
     "http://www.stanford.edu/",
     "Stanford, California",
     "Suburban",
-    "7,018 students (Medium)",
+    "07,018 students (Medium)",
     "Private",
-    "4.8%",
+    "04.8%",
     "Restrictive Early Action (Applicants do not apply to any other <strong>private</strong> college/university under their Early Action, Restrictive Early Action, Early Decision or Early Notification program.)",
     "Yes",
-    "Recommended",
+    "Recommended.",
     "700-790",
     "680-780",
     "1380-1570",
@@ -105,7 +113,11 @@ conn.execute('''INSERT INTO schools VALUES
     "$64,477",
     "$50,547",
     "100%",
-    "$18,212");
+    "$18,212",
+    "#02",
+    "#02",
+    "#03",
+    "#07");
 ''')
 
 
@@ -114,13 +126,13 @@ conn.execute('''INSERT INTO schools VALUES
     "http://www.cmu.edu/",
     "Pittsburgh, Pennsylvania",
     "City",
-    "5,819 students (Medium)",
+    "05,819 students (Medium)",
     "Private",
     "13.7%",
     "Early Decision",
     "Yes",
-    "Recommended (School of Computer Science: Math Level II and
-Physics, Chemistry or Biology)",
+    "Recommended.<br>School of Computer Science: Math Level II and
+Physics, Chemistry or Biology",
     "700-800",
     "650-750",
     "1350-1550",
@@ -142,10 +154,92 @@ Physics, Chemistry or Biology)",
     "$68,452",
     "$41,636",
     "98%",
-    "$29,800");
+    "$29,800",
+    "#05",
+    "#03",
+    "#07",
+    "#05");
 ''')
 
 
+conn.execute('''INSERT INTO schools VALUES
+    ("University of California-Berkeley",
+    "http://www.berkeley.edu/",
+    "Berkeley, California",
+    "City",
+    "27,126 students (Large)",
+    "Public",
+    "17.5%",
+    "No",
+    "No",
+    "Required.<br>College of Chemistry and College of Engineering: Math Level 2 and a science test (Biology E/M, Chemistry, or Physics) closely related to the applicant's intended major.",
+    "640-770",
+    "610-740",
+    "1250-1510",
+    "???",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "$61,654",
+    "$17,284",
+    "98.6%",
+    "$20,722",
+    "#03",
+    "#14",
+    "#08",
+    "#01");
+''')
+
+
+conn.execute('''INSERT INTO schools VALUES
+    ("Georgia Institute of Technology",
+    "http://www.gatech.edu/",
+    "Atlanta, Georgia",
+    "City",
+    "13,996 students (Medium)",
+    "Public",
+    "25%",
+    "Early Action",
+    "Yes",
+    "Optional.<br>If you have taken any of these tests before you apply, you are welcome to submit them if you think they support your application.",
+    "680-770",
+    "630-730",
+    "1360-1490",
+    "???",
+    "4",
+    "4",
+    "4",
+    "4",
+    "none",
+    "4",
+    "4",
+    "4",
+    "4",
+    "4",
+    "5",
+    "none",
+    "4",
+    "4",
+    "$48,566",
+    "$13,854",
+    "94.0%",
+    "$13,736",
+    "#06",
+    "#08",
+    "#04",
+    "#04");
+''')
 
 
 conn.commit()

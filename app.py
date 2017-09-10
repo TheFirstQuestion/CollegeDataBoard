@@ -9,43 +9,27 @@ def main():
 
 @app.route("/mit")
 def mit():
-    return render_template('college.html', school="Massachusetts Institute of Technology", data=getFromDb("Massachusetts Institute of Technology"))
+    return render_template('college.html', data=getFromDb("Massachusetts Institute of Technology"))
 
 @app.route("/stanford")
 def stanford():
-    return render_template('college.html', school="Stanford", data=getFromDb("Stanford"))
+    return render_template('college.html', data=getFromDb("Stanford"))
 
 @app.route("/carnegiemellon")
 def carnegiemellon():
-    return render_template('college.html', school="Carnegie Mellon", data=getFromDb("Carnegie Mellon"))
-
-@app.route("/caltech")
-def caltech():
-    return render_template('college.html', school="California Institute of Technology")
+    return render_template('college.html', data=getFromDb("Carnegie Mellon"))
 
 @app.route("/berkeley")
 def berkeley():
-    return render_template('college.html', school="UC Berkeley")
+    return render_template('college.html', data=getFromDb("University of California-Berkeley"))
 
 @app.route("/georgiatech")
 def georgiatech():
-    return render_template('college.html',school="Georgia Institute of Technology")
-
-@app.route("/penn")
-def penn():
-    return render_template('college.html', school="University of Pennsylvania")
-
-@app.route("/brown")
-def brown():
-    return render_template('college.html', school="Brown University")
-
-@app.route("/harvard")
-def harvard():
-    return render_template('college.html', school="Harvard")
+    return render_template('college.html', data=getFromDb("Georgia Institute of Technology"))
 
 @app.route("/compare")
 def compare():
-    return render_template("compare.html")
+    return render_template("compare.html", data=getAllFromDb())
 
 
 # Database stuff
@@ -76,6 +60,9 @@ def getFromDb(name):
         if (user['name'] == name):
             return user
 
+def getAllFromDb():
+    # Get all, alphabetically
+    return query_db('SELECT * FROM schools ORDER BY name ASC')
 
 if __name__ == "__main__":
     app.run()
