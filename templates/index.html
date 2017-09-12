@@ -1,4 +1,19 @@
 {% include "header.html" %}
 <title>CollegeDataBoard</title>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="container">
+    <div id="main"></div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
+<script>
+    // Get README from GitHub
+    $.get("https://raw.githubusercontent.com/TheFirstQuestion/CollegeDataBoard/master/README.md", function(data) {
+        // If you're in the browser, the Remarkable class is already available in the window
+        var md = new Remarkable();
+        // Outputs: <h1>Remarkable rulezz!</h1>
+        $("#main").html(md.render(data));
+    });
+</script>
