@@ -14,7 +14,6 @@
     <h1>Basic Info</h1>
     <hr>
     <div class="col-12">
-      <!-- 12 columns wide-->
       <table class="table table-hover table-striped table-bordered table-responsive" id="basicInfo">
         <thead>
             <tr class="row thead-inverse">
@@ -26,41 +25,15 @@
             </tr>
         </thead>
         <tbody>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.0.name }}</th>
-            <td class="col-2">{{ data.0.location }}</td>
-            <td class="col-2">{{ data.0.setting }}</td>
-            <td class="col-2">{{ data.0.size }}</td>
-            <td class="col-2">{{ data.0.pp }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.1.name }}</th>
-            <td class="col-2">{{ data.1.location }}</td>
-            <td class="col-2">{{ data.1.setting }}</td>
-            <td class="col-2">{{ data.1.size }}</td>
-            <td class="col-2">{{ data.1.pp }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.2.name }}</th>
-            <td class="col-2">{{ data.2.location }}</td>
-            <td class="col-2">{{ data.2.setting }}</td>
-            <td class="col-2">{{ data.2.size }}</td>
-            <td class="col-2">{{ data.2.pp }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.3.name }}</th>
-            <td class="col-2">{{ data.3.location }}</td>
-            <td class="col-2">{{ data.3.setting }}</td>
-            <td class="col-2">{{ data.3.size }}</td>
-            <td class="col-2">{{ data.3.pp }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.4.name }}</th>
-            <td class="col-2">{{ data.4.location }}</td>
-            <td class="col-2">{{ data.4.setting }}</td>
-            <td class="col-2">{{ data.4.size }}</td>
-            <td class="col-2">{{ data.4.pp }}</td>
-          </tr>
+            {% for x in data %}
+                <tr class="row">
+                  <th scope="row" class="col-4">{{ x.name }}</th>
+                  <td class="col-2">{{ x.location }}</td>
+                  <td class="col-2">{{ x.setting }}</td>
+                  <td class="col-2">{{ x.size }}</td>
+                  <td class="col-2">{{ x.pp }}</td>
+              </tr>
+            {% endfor %}
         </tbody>
       </table>
     </div>
@@ -69,7 +42,6 @@
     <h1>Rankings</h1>
     <hr>
     <div class="col-12">
-      <!-- 12 columns wide-->
       <table class="table table-hover table-striped table-bordered table-responsive" id="rankings">
         <thead>
             <tr class="row thead-inverse">
@@ -81,41 +53,15 @@
             </tr>
         </thead>
         <tbody>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.0.name }}</th>
-            <td class="col-2">{{ data.0.USr }}</td>
-            <td class="col-2">{{ data.0.niR }}</td>
-            <td class="col-2">{{ data.0.bvsR }}</td>
-            <td class="col-2">{{ data.0.ccnR }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.1.name }}</th>
-            <td class="col-2">{{ data.1.USr }}</td>
-            <td class="col-2">{{ data.1.niR }}</td>
-            <td class="col-2">{{ data.1.bvsR }}</td>
-            <td class="col-2">{{ data.1.ccnR }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.2.name }}</th>
-            <td class="col-2">{{ data.2.USr }}</td>
-            <td class="col-2">{{ data.2.niR }}</td>
-            <td class="col-2">{{ data.2.bvsR }}</td>
-            <td class="col-2">{{ data.2.ccnR }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.3.name }}</th>
-            <td class="col-2">{{ data.3.USr }}</td>
-            <td class="col-2">{{ data.3.niR }}</td>
-            <td class="col-2">{{ data.3.bvsR }}</td>
-            <td class="col-2">{{ data.3.ccnR }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.4.name }}</th>
-            <td class="col-2">{{ data.4.USr }}</td>
-            <td class="col-2">{{ data.4.niR }}</td>
-            <td class="col-2">{{ data.4.bvsR }}</td>
-            <td class="col-2">{{ data.4.ccnR }}</td>
-          </tr>
+          {% for x in data %}
+              <tr class="row">
+                <th scope="row" class="col-4">{{ x.name }}</th>
+                <td class="col-2">{{ x.USr }}</td>
+                <td class="col-2">{{ x.niR }}</td>
+                <td class="col-2">{{ x.bvsR }}</td>
+                <td class="col-2">{{ x.ccnR }}</td>
+            </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>
@@ -124,7 +70,6 @@
     <h1>Admissions Info</h1>
     <hr>
     <div class="col-12">
-      <!-- 12 columns wide-->
       <table class="table table-hover table-striped table-bordered table-responsive" id="admissions">
         <thead>
             <tr class="row thead-inverse">
@@ -136,41 +81,15 @@
             </tr>
         </thead>
         <tbody>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.0.name }}</th>
-            <td class="col-2">{{ data.0.rate }}</td>
-            <td class="col-2">{{ data.0.ED }}</td>
-            <td class="col-2">{{ data.0.app }}</td>
-            <td class="col-2">{{ data.0.st }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.1.name }}</th>
-            <td class="col-2">{{ data.1.rate }}</td>
-            <td class="col-2">{{ data.1.ED }}</td>
-            <td class="col-2">{{ data.1.app }}</td>
-            <td class="col-2">{{ data.1.st }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.2.name }}</th>
-            <td class="col-2">{{ data.2.rate }}</td>
-            <td class="col-2">{{ data.2.ED }}</td>
-            <td class="col-2">{{ data.2.app }}</td>
-            <td class="col-2">{{ data.2.st }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.3.name }}</th>
-            <td class="col-2">{{ data.3.rate }}</td>
-            <td class="col-2">{{ data.3.ED }}</td>
-            <td class="col-2">{{ data.3.app }}</td>
-            <td class="col-2">{{ data.3.st }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.4.name }}</th>
-            <td class="col-2">{{ data.4.rate }}</td>
-            <td class="col-2">{{ data.4.ED }}</td>
-            <td class="col-2">{{ data.4.app }}</td>
-            <td class="col-2">{{ data.4.st }}</td>
-          </tr>
+          {% for x in data %}
+              <tr class="row">
+                <th scope="row" class="col-4">{{ x.name }}</th>
+                <td class="col-2">{{ x.rate }}</td>
+                <td class="col-2">{{ x.ED }}</td>
+                <td class="col-2">{{ x.app }}</td>
+                <td class="col-2">{{ x.st }}</td>
+            </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>
@@ -179,7 +98,6 @@
     <h1>Money</h1>
     <hr>
     <div class="col-12">
-      <!-- 12 columns wide-->
       <table class="table table-hover table-striped table-bordered table-responsive" id="money">
         <thead>
             <tr class="row thead-inverse">
@@ -191,41 +109,15 @@
             </tr>
         </thead>
         <tbody>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.0.name }}</th>
-            <td class="col-2">{{ data.0.tuition }}</td>
-            <td class="col-2">{{ data.0.bracket }}</td>
-            <td class="col-2">{{ data.0.avgAid }}</td>
-            <td class="col-2">{{ data.0.rcvAid }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.1.name }}</th>
-            <td class="col-2">{{ data.1.tuition }}</td>
-            <td class="col-2">{{ data.1.bracket }}</td>
-            <td class="col-2">{{ data.1.avgAid }}</td>
-            <td class="col-2">{{ data.1.rcvAid }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.2.name }}</th>
-            <td class="col-2">{{ data.2.tuition }}</td>
-            <td class="col-2">{{ data.2.bracket }}</td>
-            <td class="col-2">{{ data.2.avgAid }}</td>
-            <td class="col-2">{{ data.2.rcvAid }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.3.name }}</th>
-            <td class="col-2">{{ data.3.tuition }}</td>
-            <td class="col-2">{{ data.3.bracket }}</td>
-            <td class="col-2">{{ data.3.avgAid }}</td>
-            <td class="col-2">{{ data.3.rcvAid }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.4.name }}</th>
-            <td class="col-2">{{ data.4.tuition }}</td>
-            <td class="col-2">{{ data.4.bracket }}</td>
-            <td class="col-2">{{ data.4.avgAid }}</td>
-            <td class="col-2">{{ data.4.rcvAid }}</td>
-          </tr>
+          {% for x in data %}
+              <tr class="row">
+                <th scope="row" class="col-4">{{ x.name }}</th>
+                <td class="col-2">{{ x.tuition }}</td>
+                <td class="col-2">{{ x.bracket }}</td>
+                <td class="col-2">{{ x.avgAid }}</td>
+                <td class="col-2">{{ x.rcvAid }}</td>
+            </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>
@@ -234,7 +126,6 @@
     <h1>Testing</h1>
     <hr>
     <div class="col-12">
-      <!-- 12 columns wide-->
       <table class="table table-hover table-striped table-bordered table-responsive" id="testing">
         <thead>
             <tr class="row thead-inverse">
@@ -246,41 +137,15 @@
             </tr>
         </thead>
         <tbody>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.0.name }}</th>
-            <td class="col-2">{{ data.0.SAT }}</td>
-            <td class="col-2">{{ data.0.SATm }}</td>
-            <td class="col-2">{{ data.0.SATl }}</td>
-            <td class="col-2">{{ data.0.sts }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.1.name }}</th>
-            <td class="col-2">{{ data.1.SAT }}</td>
-            <td class="col-2">{{ data.1.SATm }}</td>
-            <td class="col-2">{{ data.1.SATl }}</td>
-            <td class="col-2">{{ data.1.sts }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.2.name }}</th>
-            <td class="col-2">{{ data.2.SAT }}</td>
-            <td class="col-2">{{ data.2.SATm }}</td>
-            <td class="col-2">{{ data.2.SATl }}</td>
-            <td class="col-2">{{ data.2.sts }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.3.name }}</th>
-            <td class="col-2">{{ data.3.SAT }}</td>
-            <td class="col-2">{{ data.3.SATm }}</td>
-            <td class="col-2">{{ data.3.SATl }}</td>
-            <td class="col-2">{{ data.3.sts }}</td>
-          </tr>
-          <tr class="row">
-            <th scope="row" class="col-4">{{ data.4.name }}</th>
-            <td class="col-2">{{ data.4.SAT }}</td>
-            <td class="col-2">{{ data.4.SATm }}</td>
-            <td class="col-2">{{ data.4.SATl }}</td>
-            <td class="col-2">{{ data.4.sts }}</td>
-          </tr>
+          {% for x in data %}
+              <tr class="row">
+                <th scope="row" class="col-4">{{ x.name }}</th>
+                <td class="col-2">{{ x.SAT }}</td>
+                <td class="col-2">{{ x.SATm }}</td>
+                <td class="col-2">{{ x.SATl }}</td>
+                <td class="col-2">{{ x.sts }}</td>
+            </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>

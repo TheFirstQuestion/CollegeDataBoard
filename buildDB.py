@@ -242,5 +242,8 @@ conn.execute('''INSERT INTO schools VALUES
 ''')
 
 
+
+
+
 conn.commit()
 conn.close()
