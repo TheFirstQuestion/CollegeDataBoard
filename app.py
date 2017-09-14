@@ -27,6 +27,14 @@ def berkeley():
 def georgiatech():
     return render_template('college.html', data=getFromDb("Georgia Institute of Technology"))
 
+@app.route("/cornell")
+def cornell():
+    return render_template('college.html', data=getFromDb("Cornell"))
+
+@app.route("/michigan")
+def michigan():
+    return render_template('college.html', data=getFromDb("University of Michigan"))
+
 @app.route("/compare")
 def compare():
     return render_template("compare.html", data=getAllFromDb())
@@ -56,9 +64,9 @@ def query_db(query, args=(), one=False):
     return (rv[0] if rv else None) if one else rv
 
 def getFromDb(name):
-    for user in query_db('SELECT * FROM schools'):
-        if (user['name'] == name):
-            return user
+    for s in query_db('SELECT * FROM schools'):
+        if (s['name'] == name):
+            return s
 
 def getAllFromDb():
     # Get all, alphabetically

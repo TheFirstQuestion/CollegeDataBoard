@@ -1,6 +1,6 @@
 {% include "header.html" %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/college-style.css') }}">
-<title>{{ school }}</title>
+<title>{{ data.name }}</title>
 
 <!-- To allow HTML tags in data, which Flask autoescapes -->
 {% autoescape false %}

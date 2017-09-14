@@ -242,6 +242,86 @@ conn.execute('''INSERT INTO schools VALUES
 ''')
 
 
+conn.execute('''INSERT INTO schools VALUES
+    ("Cornell",
+    "https://www.cornell.edu/",
+    "Ithaca, New York",
+    "City",
+    "14,195 students (Medium)",
+    "Private",
+    "14.1%",
+    "Early Decision",
+    "Yes",
+    "Required.<br>Engineering: Mathematics (any level) and a science of your choice<br>Arts and Sciences: Two subjects of your choice",
+    "680-770",
+    "650-740",
+    "1330-1510",
+    "???",
+    "4",
+    "4",
+    "5",
+    "5",
+    "none",
+    "none",
+    "4",
+    "4",
+    "4",
+    "5",
+    "5",
+    "4",
+    "4",
+    "4",
+    "$67,613",
+    "100%",
+    "100%",
+    "$26,486",
+    "#09",
+    "#18",
+    "#10",
+    "#27");
+''')
+# CS = college of arts + science OR college of engineering
+
+
+
+conn.execute('''INSERT INTO schools VALUES
+    ("University of Michigan",
+    "http://www.umich.edu/",
+    "Ann Arbor, Michigan",
+    "City",
+    "28,217 students (Large)",
+    "Public",
+    "28.6%",
+    "Early Action",
+    "Yes",
+    "Optional.<br>You will not be penalized for low SAT subject test scores since they are not a required component of a complete application.",
+    "660-760",
+    "620-720",
+    "1280-1570",
+    "???",
+    "5",
+    "4",
+    "4",
+    "4",
+    "4",
+    "3",
+    "4",
+    "4",
+    "4",
+    "5",
+    "5",
+    "4",
+    "4",
+    "4",
+    "$59,784",
+    "89%",
+    "95.6%",
+    "$18,251",
+    "#07",
+    "#20",
+    "#19",
+    "#08");
+''')
 
 
 
