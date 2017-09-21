@@ -17,21 +17,23 @@
       <table class="table table-hover table-striped table-bordered table-responsive" id="basicInfo">
         <thead>
             <tr class="row thead-inverse">
-                <th class="col-4"></th>
+                <th class="col-2"></th>
                 <th class="col-2" onclick="sortTable(0, 'basicInfo')">Location</th>
                 <th class="col-2" onclick="sortTable(1, 'basicInfo')">Setting</th>
                 <th class="col-2" onclick="sortTable(2, 'basicInfo')">Size</th>
                 <th class="col-2" onclick="sortTable(3, 'basicInfo')">Public/Private</th>
+                <th class="col-2" onclick="sortTable(4, 'basicInfo')">Demographics</th>
             </tr>
         </thead>
         <tbody>
             {% for x in data %}
                 <tr class="row">
-                  <th scope="row" class="col-4">{{ x.name }}</th>
+                  <th scope="row" class="col-2">{{ x.name }}</th>
                   <td class="col-2">{{ x.location }}</td>
                   <td class="col-2">{{ x.setting }}</td>
                   <td class="col-2">{{ x.size }}</td>
                   <td class="col-2">{{ x.pp }}</td>
+                  <td class="col-2">{{ x.demographics }}</td>
               </tr>
             {% endfor %}
         </tbody>

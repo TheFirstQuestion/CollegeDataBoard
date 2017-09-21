@@ -39,7 +39,9 @@ conn.execute('''CREATE TABLE schools
     USr VARCHAR,
     niR VARCHAR,
     bvsR VARCHAR,
-    ccnR VARCHAR
+    ccnR VARCHAR,
+    demographics VARCHAR,
+    notes VARCHAR
      );''')
 
 conn.execute('''INSERT INTO schools VALUES
@@ -78,7 +80,16 @@ conn.execute('''INSERT INTO schools VALUES
     "#01",
     "#01",
     "#02",
-    "#02");
+    "#02",
+    "37% White
+25% Asian
+16% Hispanic
+10% Non-resident alien
+6% Black
+5% Two or more races
+2% Unknown
+<1% American Indian/Alaska Native",
+    "no-fail first year");
 ''')
 
 conn.execute('''INSERT INTO schools VALUES
@@ -117,7 +128,17 @@ conn.execute('''INSERT INTO schools VALUES
     "#02",
     "#02",
     "#03",
-    "#07");
+    "#07",
+    "38% White
+20% Asian
+16% Hispanic
+11% Two or more races
+8% Non-resident alien
+6% Black
+1% American Indian/Alaska Native
+<1% Native Hawaiian/Pacific Islander
+<1% Unknown",
+    "");
 ''')
 
 
@@ -158,7 +179,17 @@ Physics, Chemistry or Biology",
     "#05",
     "#03",
     "#07",
-    "#05");
+    "#05",
+    "35% White
+27% Asian
+16% Non-resident alien
+8% Hispanic
+5% Unknown
+5% Black
+4% Two or more races
+<1% American Indian/Alaska Native
+<1% Native Hawaiian/Pacific Islander",
+    "Only College of Computer Science");
 ''')
 
 
@@ -198,7 +229,17 @@ conn.execute('''INSERT INTO schools VALUES
     "#03",
     "#14",
     "#08",
-    "#01");
+    "#01",
+    "35% Asian
+28% White
+14% Hispanic
+14% Non-resident alien
+5% Two or more races
+3% Unknown
+2% Black
+<1% Native Hawaiian/Pacific Islander
+<1% American Indian/Alaska Native",
+    "");
 ''')
 
 
@@ -238,7 +279,17 @@ conn.execute('''INSERT INTO schools VALUES
     "#06",
     "#08",
     "#04",
-    "#04");
+    "#04",
+    "53% White
+19% Asian
+11% Non-resident alien
+7% Hispanic
+6% Black
+4% Two or more races
+1% Unknown
+<1% Native Hawaiian/Pacific Islander
+<1% American Indian/Alaska Native",
+    "");
 ''')
 
 
@@ -278,9 +329,18 @@ conn.execute('''INSERT INTO schools VALUES
     "#09",
     "#18",
     "#10",
-    "#27");
+    "#27",
+    "42% White
+17% Asian
+12% Hispanic
+10% Non-resident alien
+9% Unknown
+6% Black
+4% Two or more races
+<1% American Indian/Alaska Native
+<1% Native Hawaiian/Pacific Islander",
+    "Computer Science  = College of Arts + Science OR College of Engineering");
 ''')
-# CS = college of arts + science OR college of engineering
 
 
 
@@ -320,7 +380,17 @@ conn.execute('''INSERT INTO schools VALUES
     "#07",
     "#20",
     "#19",
-    "#08");
+    "#08",
+    "62% White
+13% Asian
+7% Unknown
+7% Non-resident alien
+4% Hispanic
+4% Black
+3% Two or more races
+<1% American Indian/Alaska Native
+<1% Native Hawaiian/Pacific Islander",
+    "");
 ''')
 
 
