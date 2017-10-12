@@ -142,8 +142,8 @@
           <td class="col-4">780</td>
         </tr>
         <tr class="row table-secondary">
-          <th scope="row" class="col-3">Subject Tests</th>
-          <td class="col-5">{{ data.sts }}</td>
+          <th scope="row" class="col-3">Superscore?</th>
+          <td class="col-5">{{ data.super }}</td>
 
           <td class="col-4">Math II: 770</td>
         </tr>
@@ -260,6 +260,7 @@
                         // Hide rows
                         $(this).parent().addClass("d-none");
                     }
+                    // Hide notes section if there aren't any
                     if ($(this).text() == "") {
                         $(".notes").addClass("d-none");
                     }

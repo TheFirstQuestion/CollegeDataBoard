@@ -32,3 +32,14 @@ CollegeDataBoard was created primarily to learn Bootstrap and Flask. It also mak
         python app.py
 
 5. Visit http://localhost:5000/ in your browser.
+
+
+## Makefile
+
+You can also use the makefile to install.
+
+1. Create the database: `make clean`
+
+2. Run the app: `make run`
+
+3. Visit http://localhost:5000/ in your browser.

@@ -135,7 +135,7 @@
                 <th class="col-2" onclick="sortTable(0, 'testing')">SAT Total</th>
                 <th class="col-2" onclick="sortTable(1, 'testing')">SAT Math</th>
                 <th class="col-2" onclick="sortTable(2, 'testing')">SAT Language</th>
-                <th class="col-2" onclick="sortTable(3, 'testing')">Subject Tests</th>
+                <th class="col-2" onclick="sortTable(3, 'testing')">Superscore?</th>
             </tr>
         </thead>
         <tbody>
@@ -145,7 +145,7 @@
                 <td class="col-2">{{ x.SAT }}</td>
                 <td class="col-2">{{ x.SATm }}</td>
                 <td class="col-2">{{ x.SATl }}</td>
-                <td class="col-2">{{ x.sts }}</td>
+                <td class="col-2">{{ x.super }}</td>
             </tr>
           {% endfor %}
         </tbody>
