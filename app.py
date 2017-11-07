@@ -73,4 +73,4 @@ def getAllFromDb():
     return query_db('SELECT * FROM schools ORDER BY name ASC')
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')
