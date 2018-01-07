@@ -394,6 +394,54 @@ conn.execute('''INSERT INTO schools VALUES
 ''')
 
 
+conn.execute('''INSERT INTO schools VALUES
+    ("California Institute of Technology",
+    "http://www.caltech.edu/",
+    "Pasadena, California",
+    "City",
+    "01,001 students (Small)",
+    "Private",
+    "08%",
+    "Early Action",
+    "Yes",
+    "Required.<br>SAT Math Level 2; one science subject test",
+    "x",
+    "x",
+    "x",
+    "x",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "$68,901",
+    "$42,091",
+    "55%",
+    "$31,931",
+    "#10",
+    "#05",
+    "#99",
+    "#03",
+    "45% Asian
+27% White
+12% Hispanic
+8% Non-resident alien
+5% Two or more races
+2% Black
+<1% Unknown
+<1% American Indian/Alaska Native",
+    "placement in courses due to exams; no credit from AP scores");
+''')
+
 
 conn.commit()
 conn.close()

@@ -35,6 +35,10 @@ def cornell():
 def michigan():
     return render_template('college.html', data=getFromDb("University of Michigan"))
 
+@app.route("/caltech")
+def caltech():
+    return render_template('college.html', data=getFromDb("California Institute of Technology"))
+
 @app.route("/compare")
 def compare():
     return render_template("compare.html", data=getAllFromDb())
