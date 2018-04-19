@@ -32,7 +32,7 @@
                   <td class="col-2">{{ x.location }}</td>
                   <td class="col-2">{{ x.setting }}</td>
                   <td class="col-2">{{ x.size }}</td>
-                  <td class="col-2">{{ x.pp }}</td>
+                  <td class="col-2">{{ x.publicOrPrivate }}</td>
                   <td class="col-2">{{ x.demographics }}</td>
               </tr>
             {% endfor %}
@@ -86,10 +86,10 @@
           {% for x in data %}
               <tr class="row">
                 <th scope="row" class="col-4">{{ x.name }}</th>
-                <td class="col-2">{{ x.rate }}</td>
-                <td class="col-2">{{ x.ED }}</td>
-                <td class="col-2">{{ x.app }}</td>
-                <td class="col-2">{{ x.st }}</td>
+                <td class="col-2">{{ x.acceptanceRate }}</td>
+                <td class="col-2">{{ x.earlyDecision }}</td>
+                <td class="col-2">{{ x.applicationType }}</td>
+                <td class="col-2">{{ x.subjectTests }}</td>
             </tr>
           {% endfor %}
         </tbody>
@@ -132,20 +132,16 @@
         <thead>
             <tr class="row thead-inverse">
                 <th class="col-4"></th>
-                <th class="col-2" onclick="sortTable(0, 'testing')">SAT Total</th>
-                <th class="col-2" onclick="sortTable(1, 'testing')">SAT Math</th>
-                <th class="col-2" onclick="sortTable(2, 'testing')">SAT Language</th>
-                <th class="col-2" onclick="sortTable(3, 'testing')">Superscore?</th>
+                <th class="col-4" onclick="sortTable(0, 'testing')">ACT Composite</th>
+                <th class="col-4" onclick="sortTable(1, 'testing')">Superscore?</th>
             </tr>
         </thead>
         <tbody>
           {% for x in data %}
               <tr class="row">
                 <th scope="row" class="col-4">{{ x.name }}</th>
-                <td class="col-2">{{ x.SAT }}</td>
-                <td class="col-2">{{ x.SATm }}</td>
-                <td class="col-2">{{ x.SATl }}</td>
-                <td class="col-2">{{ x.super }}</td>
+                <td class="col-4">{{ x.act }}</td>
+                <td class="col-4">{{ x.superscore }}</td>
             </tr>
           {% endfor %}
         </tbody>

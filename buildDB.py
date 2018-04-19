@@ -138,7 +138,9 @@ conn.execute('''INSERT INTO schools VALUES
 1% American Indian/Alaska Native
 <1% Native Hawaiian/Pacific Islander
 <1% Unknown",
-    "");
+    "<a href='https://english.stanford.edu/csenglish'>CS + English joint major</a><br>
+    <a href='https://mcs.stanford.edu/'>Data Science Major</a><br>
+    <a href='http://slork.stanford.edu/bio/'>Laptop Orchestra</a>");
 ''')
 
 

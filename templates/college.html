@@ -31,9 +31,9 @@
         </tr>
         <tr class="row table-secondary">
           <th scope="row" class="col-3">Public/Private</th>
-          <td class="col-9">{{ data.pp }}</td>
+          <td class="col-9">{{ data.publicOrPrivate }}</td>
         </tr>
-        <tr class="row table-secondary">
+        <tr class="row table-primary">
           <th scope="row" class="col-3">Demographics</th>
           <td class="col-9">{{ data.demographics }}</td>
         </tr>
@@ -75,19 +75,19 @@
       <tbody>
         <tr class="row table-primary">
           <th scope="row" class="col-3">Admit Rate</th>
-          <td class="col-9">{{ data.rate }}</td>
+          <td class="col-9">{{ data.acceptanceRate }}</td>
         </tr>
         <tr class="row table-secondary">
           <th scope="row" class="col-3">Early Decision/Early Action</th>
-          <td class="col-9">{{ data.ED }}</td>
+          <td class="col-9">{{ data.earlyDecision }}</td>
         </tr>
         <tr class="row table-primary">
           <th scope="row" class="col-3">Common App</th>
-          <td class="col-9">{{ data.app }}</td>
+          <td class="col-9">{{ data.applicationType }}</td>
         </tr>
         <tr class="row table-secondary">
           <th scope="row" class="col-3">Subject Tests</th>
-          <td class="col-9">{{ data.st }}</td>
+          <td class="col-9">{{ data.subjectTests }}</td>
         </tr>
       </tbody>
     </table>
@@ -127,23 +127,13 @@
     <table class="table table-hover table-bordered table-responsive">
       <tbody>
         <tr class="row table-primary">
-          <th scope="row" class="col-3">SAT Total</th>
-          <td class="col-5">{{ data.SAT }}</td>
-          <td class="col-4">1550</td>
-        </tr>
-        <tr class="row table-secondary">
-          <th scope="row" class="col-3">SAT Math</th>
-          <td class="col-5">{{ data.SATm }}</td>
-          <td class="col-4">780</td>
-        </tr>
-        <tr class="row table-primary">
-          <th scope="row" class="col-3">SAT Language</th>
-          <td class="col-5">{{ data.SATl }}</td>
-          <td class="col-4">770</td>
+          <th scope="row" class="col-3">ACT Composite</th>
+          <td class="col-5">{{ data.act }}</td>
+          <td class="col-4">36</td>
         </tr>
         <tr class="row table-secondary">
           <th scope="row" class="col-3">Superscore?</th>
-          <td class="col-9">{{ data.super }}</td>
+          <td class="col-9">{{ data.superscore }}</td>
         </tr>
       </tbody>
     </table>
