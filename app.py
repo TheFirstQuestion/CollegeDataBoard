@@ -1,4 +1,4 @@
-from flask import Flask, render_template, g
+from flask import *
 import sqlite3
 
 app = Flask(__name__)
@@ -42,6 +42,10 @@ def caltech():
 @app.route("/compare")
 def compare():
     return render_template("compare.html", data=getAllFromDb())
+
+@app.route('/favicon.ico')
+def favicon():
+    return redirect(url_for('static', filename='images/favicon.ico'), code=302)
 
 
 # Database stuff
