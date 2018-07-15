@@ -25,4 +25,4 @@ CollegeDataBoard was created primarily to learn Bootstrap and Flask. It also mak
 
 4. Run the program
 
-    python3 app.py
+        python3 app.py
