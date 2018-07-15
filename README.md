@@ -11,35 +11,18 @@ CollegeDataBoard was created primarily to learn Bootstrap and Flask. It also mak
 
 ## Installing
 
-1. Verify that you are running Python 3.
+1. Create a virtualenv
 
-        python3 -V
-        python -V
+        virtualenv collegedataboardenv
 
-2. Install Flask.
+2. Enter the virtualenv
 
-        pip3 install flask
+        source collegedataboardenv/bin/activate
+
+3. Install flask
+
         pip install flask
 
-3. Build the database.
+4. Run the program
 
-        python3 buildDB.py
-        python buildDB.py
-
-4. Run `app.py`
-
-        python3 app.py
-        python app.py
-
-5. Visit http://localhost:5000/ in your browser.
-
-
-## Makefile
-
-You can also use the makefile to install.
-
-1. Create the database: `make clean`
-
-2. Run the app: `make run`
-
-3. Visit http://localhost:5000/ in your browser.
+    python3 app.py
